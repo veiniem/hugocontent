@@ -17,3 +17,6 @@ Hugo CMS on suosittu kehittäjien keskuudessa sen nopeuden, turvallisuuden ja yk
 
 ## Käyttötarkoitus tässä toteutuksessa
 Tässä toteutuksessa Hugoa käytetään staattisten verkkosisältöjen generointiin näiden Markdown-tiedostojen sisältöjen mukaisesti. Markdownien sisältö käännetään verkkosisällöksi Hugon avulla, jonka jälkeen tuotetut staattiset sisällöt muodostetaan Docker-isännän tiedostojärjestelmään näiden tarjoamiseksi sitten web-palveluna.
+
+## Kontin määrittely
+Toteutuksessa käytetty Hugo-containerimage käyttää pohjakuvana Alpine Linuxia, jonka päälle Hugo on asennettu. Kontin käynnistyksen yhteydessä päivitetyt sisällöt haetaan käännettäväksi tästä repositoriosta git:llä. Dockerimagessa viimeinen CMD-määritys on bash-komento "sleep 300", jonka myötä kontti siirtyy exited-tilaan 5 minuuttia käynnistymisensä jälkeen. Tämän lisäksi docker-compose.yml:ssä on määritetty kontti uudelleenkäynnistymään automaattisesti sen sammumisen yhteydessä, minkä myötä päivitetyt sisällöt haetaan ja käännetään näytettäväksi aina viiden minuutin välein.
