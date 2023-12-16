@@ -1,6 +1,6 @@
 +++
 title = 'Mikropalveluarkkitehtuuri'
-date = 2023-12-16T17:12:+02:00
+date = 2023-12-16T17:12:15+02:00
 draft = false
 +++
 
