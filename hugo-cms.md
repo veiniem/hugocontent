@@ -1,5 +1,5 @@
 +++
-title = 'Hugo CMS'
+title = 'Content management -palveluratkaisu (CMS)'
 date = 2023-12-16T17:28:27+02:00
 draft = false
 +++
